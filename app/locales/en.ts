@@ -222,6 +222,11 @@ const en: LocaleType = {
       Title: "Auto Generate Title",
       SubTitle: "Generate a suitable title based on the conversation content",
     },
+    Mcp: {
+      Title: "Enable MCP",
+      SubTitle:
+        "Allow Model Context Protocol tool calls (also requires ENABLE_MCP=true on the server)",
+    },
     Sync: {
       CloudState: "Last Update",
       NotSyncYet: "Not sync yet",

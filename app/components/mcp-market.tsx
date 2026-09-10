@@ -16,11 +16,11 @@ import {
   getClientsStatus,
   getClientTools,
   getMcpConfigFromFile,
-  isMcpEnabled,
   pauseMcpServer,
   restartAllClients,
   resumeMcpServer,
 } from "../mcp/actions";
+import { isMcpEnabledClient } from "../mcp/utils";
 import {
   ListToolsResponse,
   McpConfigData,
@@ -62,7 +62,7 @@ export function McpMarketPage() {
   // 检查 MCP 是否启用
   useEffect(() => {
     const checkMcpStatus = async () => {
-      const enabled = await isMcpEnabled();
+      const enabled = await isMcpEnabledClient();
       setMcpEnabled(enabled);
       if (!enabled) {
         navigate(Path.Home);
