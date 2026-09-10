@@ -29,7 +29,8 @@ import { getClientConfig } from "../config/client";
 import { type ClientApi, getClientApi } from "../client/api";
 import { useAccessStore } from "../store";
 import clsx from "clsx";
-import { initializeMcpSystem, isMcpEnabled } from "../mcp/actions";
+import { initializeMcpSystem } from "../mcp/actions";
+import { isMcpEnabledClient } from "../mcp/utils";
 
 export function Loading(props: { noLogo?: boolean }) {
   return (
@@ -245,7 +246,7 @@ export function Home() {
 
     const initMcp = async () => {
       try {
-        const enabled = await isMcpEnabled();
+        const enabled = await isMcpEnabledClient();
         if (enabled) {
           console.log("[MCP] initializing...");
           await initializeMcpSystem();

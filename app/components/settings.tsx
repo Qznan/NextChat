@@ -1692,6 +1692,22 @@ export function Settings() {
           </ListItem>
 
           <ListItem
+            title={Locale.Settings.Mcp.Title}
+            subTitle={Locale.Settings.Mcp.SubTitle}
+          >
+            <input
+              aria-label={Locale.Settings.Mcp.Title}
+              type="checkbox"
+              checked={config.enableMcp}
+              onChange={(e) =>
+                updateConfig(
+                  (config) => (config.enableMcp = e.currentTarget.checked),
+                )
+              }
+            ></input>
+          </ListItem>
+
+          <ListItem
             title={Locale.Settings.SendPreviewBubble.Title}
             subTitle={Locale.Settings.SendPreviewBubble.SubTitle}
           >
