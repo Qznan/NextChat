@@ -276,7 +276,7 @@ export function ModelConfigList(props: {
       {/* Custom request params — sits with the other send-parameter items.
           Rendered outside the Google-only block so all providers see it. */}
       <ExtraParamsEditor
-        value={props.modelConfig.extraParams}
+        value={props.modelConfig.extraParams ?? ""}
         onChange={(val) =>
           props.updateConfig((config) => (config.extraParams = val))
         }
@@ -379,11 +379,11 @@ function ExtraParamsEditor(props: {
   value: string;
   onChange: (v: string) => void;
 }) {
-  const [draft, setDraft] = useState(props.value);
+  const [draft, setDraft] = useState(props.value ?? "");
 
   // Keep draft in sync if config changes elsewhere (e.g. reset).
   useEffect(() => {
-    setDraft(props.value);
+    setDraft(props.value ?? "");
   }, [props.value]);
 
   const trimmed = draft.trim();
