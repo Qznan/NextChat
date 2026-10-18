@@ -527,6 +527,13 @@ const en: LocaleType = {
         Title: "Custom Models",
         SubTitle: "Custom model options, seperated by comma",
       },
+      CustomEndpoints: {
+        Title: "Custom Endpoints",
+        SubTitle:
+          "Bundle provider, endpoint, API key and custom models into switchable endpoints",
+        Add: "Add Endpoint",
+        NamePlaceholder: "Endpoint name (e.g. Work OpenAI)",
+      },
       Google: {
         ApiKey: {
           Title: "API Key",

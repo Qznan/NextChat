@@ -543,6 +543,13 @@ const cn = {
         Title: "自定义模型名",
         SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
       },
+      CustomEndpoints: {
+        Title: "自定义接口",
+        SubTitle:
+          "将服务商、接口地址、API Key、自定义模型名打包为可快速切换的接口",
+        Add: "新增接口",
+        NamePlaceholder: "接口名称（如：公司 OpenAI）",
+      },
       AI302: {
         ApiKey: {
           Title: "接口密钥",
